@@ -14,11 +14,9 @@ class AuthClientServiceProvider extends ServiceProvider
             ], 'config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => base_path('resources/views/vendor/auth-client'),
-            ], 'views');
+                __DIR__ . '/../stubs/Http' => app_path('Http'),
+            ], 'middleware');
         }
-
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'auth-client');
     }
 
     public function register()
